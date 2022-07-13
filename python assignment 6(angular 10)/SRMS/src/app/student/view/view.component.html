@@ -1,0 +1,36 @@
+<h2> Result Management System</h2>
+
+<!--alert-->
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success in operating the operation</strong> !
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="close()"></button>
+  </div>
+  
+   <div style="margin-left:25% ; margin-top:10%; margin-right:25%;">
+    <h4 style="font:italic">  Details Of {{current.name}}</h4>
+       
+    <!--table for showing all the info-->
+       <table class="table table-borderless table-dark" >
+           <tbody>
+            <tr>                                          
+                <th scope="row">Roll Number</th>
+                <td>{{current.rollNo}} </td>
+            </tr>
+            <tr>
+                 <th scope="row">Email</th>
+                 <td>{{current.name}}</td>
+             </tr> 
+             <tr>
+                 <th scope="row">Date Of Birth</th>
+                 <td>{{current.dob}}</td>
+             </tr> 
+             <tr>
+                 <th scope="row">Score</th>
+                 <td>{{current.score}}</td>
+             </tr> 
+
+           </tbody>
+          
+        </table>
+   </div>
+

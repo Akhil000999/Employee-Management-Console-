@@ -1,0 +1,51 @@
+<!--logout button for logout action-->
+<h2> Result Management System
+  <button routerLink="/logout" type="button" class="btn btn-secondary" style="float:right">Log Out</button>
+</h2>
+
+
+<div class=" div1 col-md-6 offset-md-3 p-3 " >
+  <!--Alert showing that it got successfully upadated-->
+  
+    <h4 class="text-dark"> Update Result</h4>
+    <!--creating a tamplet form for the updaterecord-->
+    <form [formGroup]="updateRecord" (ngSubmit)="fetchRecord()" >
+      
+      
+      <div class="form-outline mb-2">
+        <label class="form-label text-light" >Roll No.</label>
+        <input type="number"  class="form-control form-control-lg"  formControlName="rollNo" placeholder="Roll No."/>
+      </div>
+   
+      <!--using form for updatring the student name-->
+      <div class="form-outline mb-2">
+        <label class="form-label text-light" for="form1Example13">Student Name</label>
+        <input type="text" formControlName="name" class="form-control form-control-lg" placeholder="Student Name."/>
+      </div>
+
+
+      <!--udsing form for updating the date of birth-->
+      <div class="form-outline mb-2">
+        <label class="form-label text-light" for="form1Example13">Date Of Birth</label>
+        <input type="date" formControlName="dob" class="form-control form-control-lg" />
+      </div>
+
+      <!--using form for updating the score -->
+      <div class="form-outline mb-2">
+        <label class="form-label text-light" for="form1Example23">Score</label>
+        <input type="number" formControlName="score" class="form-control form-control-lg" placeholder="Score"/>
+        <span class="error" *ngIf></span>
+      </div>
+
+      <div class="d-flex justify-content-around align-items-center mb-4">
+        
+    
+      </div>
+
+      
+      <button type="submit" class="btn btn-primary btn-lg btn-block m-3">Submit</button>
+      <a routerLink="/teacher" class="btn btn-primary btn-lg btn-block ">Cancel</a>
+
+    </form> 
+  </div>
+
